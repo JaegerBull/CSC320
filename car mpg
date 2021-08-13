@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class carMPG {
+
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+
+        String brand, model;
+        int year;
+        double gallons, startOdometer, endOdometer;
+
+        System.out.println("Enter a car brand:");
+            brand = sc.nextLine();
+        System.out.println("Enter the car model:");
+            model = sc.nextLine();
+        System.out.println("Enter the model year:");
+            year = sc.nextInt();
+        System.out.println("Enter the starting odometer reading");
+            startOdometer = sc.nextDouble();
+        System.out.println("Enter the ending odometer reading");
+            endOdometer = sc.nextDouble();
+        System.out.println("Enter the gallons used during the trip");
+            gallons = sc.nextDouble();
+
+        sc.close();
+
+        double mpg = (endOdometer - startOdometer) / gallons;
+
+        System.out.println("Brand: " + brand);
+        System.out.println("Model: " + model);
+        System.out.println("Model year: " + year);
+        System.out.println("Starting odometer reading: " + startOdometer);
+        System.out.println("Ending Odometer reading: " + endOdometer);
+        System.out.println("MPG: " +  mpg);
